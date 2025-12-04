@@ -1,0 +1,77 @@
+@font-face {
+  font-family: rick;
+  src: url("./sources/rick.ttf");
+}
+body {
+    background-color: black;
+}
+*{
+ text-align: center;
+
+}
+
+h1{
+   font-family: rick;
+    color: white;
+}
+
+
+div {
+    text-align: center
+}
+
+.bt1{
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+}
+
+#id1 {
+  text-align: center;
+}   
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.cont-character {
+    width: 220px;
+    background-color: #656161;
+    border: 1px solid ;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(94, 85, 85, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pict-character img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.info-character  {
+    text-align: center;
+    color: #fff;
+    background-color: #656161;
+    font-family: Arial, sans-serif;
+}
+
+.name-character {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.status-character {
+    font-size: 15px;
+    opacity: 0.85;
+}
