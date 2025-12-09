@@ -9,7 +9,7 @@ button.addEventListener("click", () => {
         alert("Ingrese un nombre del personaje");
         return;
     }
-
+0
     fetch(`https://rickandmortyapi.com/api/character/?name=${name}`)
         .then(res => res.json())
         .then(data => {
@@ -17,7 +17,7 @@ button.addEventListener("click", () => {
         })
         .catch(() => {
             container.innerHTML = "";
-        });
+        }); 
 });
 
 

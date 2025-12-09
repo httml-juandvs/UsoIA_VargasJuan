@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3789/3789946.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>To do List</h1>
+            <p>Organiza tus tareas de forma elegante</p>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="taskTitle" 
+                placeholder="Título de la tarea" 
+                maxlength="100"
+            >
+            <textarea 
+                id="taskDescription" 
+                placeholder="Descripción (opcional)"
+                maxlength="500"
+            ></textarea>
+            <div class="input-group">
+                <select id="taskPriority" class="priority-select">
+                    <option value="low">Baja</option>
+                    <option value="medium" selected>Media</option>
+                    <option value="high">Alta</option>
+                </select>
+                <button class="btn btn-primary" id="addTaskBtn">
+                    Agregar Tarea
+                </button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="active">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+        </div>
+
+        <div class="tasks-section" id="tasksList">
+            <div class="empty-state">
+                <p>No hay tareas aún. ¡Crea una para comenzar!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-header">Editar Tarea</div>
+            <div class="form-group">
+                <label>Título</label>
+                <input 
+                    type="text" 
+                    id="editTitle" 
+                    placeholder="Título de la tarea"
+                    maxlength="100"
+                >
+            </div>
+            <div class="form-group">
+                <label>Descripción</label>
+                <textarea 
+                    id="editDescription" 
+                    placeholder="Descripción (opcional)"
+                    maxlength="500"
+                ></textarea>
+            </div>
+            <div class="form-group">
+                <label>Prioridad</label>
+                <select id="editPriority" class="priority-select" style="width: 100%;">
+                    <option value="low">Baja</option>
+                    <option value="medium">Media</option>
+                    <option value="high">Alta</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-small btn-cancel" id="cancelEditBtn">Cancelar</button>
+                <button class="btn btn-small btn-save" id="saveEditBtn">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
